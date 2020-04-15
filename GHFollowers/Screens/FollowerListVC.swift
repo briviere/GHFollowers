@@ -9,12 +9,12 @@
 import UIKit
 
 class FollowerListVC: UIViewController {
-    enum Section {
-        case main
-    }
+    enum Section { case main }
     
     var username: String!
     var followers: [Follower] = []
+    var page = 1
+    var hasMoreFollowers = true
     
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, Follower>!
@@ -23,13 +23,13 @@ class FollowerListVC: UIViewController {
         super.viewDidLoad()
         configureCollectionView()
         configureViewController()
-        getFollowes()
+        getFollowers(username: username, page: page)
         configureDataSource()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: true)
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     func configureViewController() {
@@ -38,7 +38,8 @@ class FollowerListVC: UIViewController {
     }
     
     func configureCollectionView() {
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createThreeColumnFlowLayout())
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UIHelper.createThreeColumnFlowLayout(in: view))
+        collectionView.delegate = self
         view.addSubview(collectionView)
         collectionView.backgroundColor = .systemBackground
         
@@ -46,27 +47,15 @@ class FollowerListVC: UIViewController {
         
     }
     
-    func createThreeColumnFlowLayout() -> UICollectionViewFlowLayout {
-        let width               = view.bounds.width
-        let padding: CGFloat            =  12
-        let minimunItemSpacing: CGFloat = 10
-        let availableWidth = width - (padding * 2) - (minimunItemSpacing * 2)
-        let itemWidth = availableWidth / 3
+    func getFollowers(username: String, page: Int) {
         
-        let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
-        flowLayout.itemSize = CGSize(width: itemWidth, height: itemWidth + 40)
-        
-        return flowLayout
-    }
-    
-    func getFollowes() {
-        
-        NetworkManager.shared.getFollowers(for: username, page: 1) { result in
+        NetworkManager.shared.getFollowers(for: username, page: page) { [weak self] result in
+            guard let self = self  else { return }
             
             switch result {
                 
             case .success(let followers):
+                if followers.count < 100 { self.hasMoreFollowers = false }
                 self.followers = followers
                 self.updateData()
             case .failure(let error):
@@ -92,5 +81,20 @@ class FollowerListVC: UIViewController {
             self.dataSource.apply(snapshot, animatingDifferences: true)
         }
         
+    }
+}
+
+extension FollowerListVC: UICollectionViewDelegate {
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let height = scrollView.frame.size.height
+        
+        if offsetY > contentHeight - height {
+            guard hasMoreFollowers else { return }
+            page += 1
+            getFollowers(username: username, page: page)
+        }
     }
 }
