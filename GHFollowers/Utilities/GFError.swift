@@ -1,8 +1,8 @@
 //
-//  ErrorMessage.swift
+//  GFError.swift
 //  GHFollowers
 //
-//  Created by Brian Riviere on 2020-04-12.
+//  Created by Brian Riviere on 2020-04-16.
 //  Copyright © 2020 Brian Riviere. All rights reserved.
 //
 
