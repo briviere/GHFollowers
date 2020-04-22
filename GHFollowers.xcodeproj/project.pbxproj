@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		951D916D244544080070EA44 /* FollowersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951D916C244544080070EA44 /* FollowersCell.swift */; };
 		951D916F244544950070EA44 /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951D916E244544950070EA44 /* GFAvatarImageView.swift */; };
+		9525FE0D244FD72600A62219 /* FavoritesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9525FE0C244FD72500A62219 /* FavoritesCell.swift */; };
 		952D86742449CF8400964E72 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952D86732449CF8400964E72 /* Constants.swift */; };
 		953F3C9E2441161300282304 /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953F3C9D2441161300282304 /* GFButton.swift */; };
 		953F3CA024421A5C00282304 /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953F3C9F24421A5C00282304 /* GFTextField.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		951D916C244544080070EA44 /* FollowersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersCell.swift; sourceTree = "<group>"; };
 		951D916E244544950070EA44 /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
+		9525FE0C244FD72500A62219 /* FavoritesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCell.swift; sourceTree = "<group>"; };
 		952D86732449CF8400964E72 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		953F3C9D2441161300282304 /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		953F3C9F24421A5C00282304 /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				951D916C244544080070EA44 /* FollowersCell.swift */,
+				9525FE0C244FD72500A62219 /* FavoritesCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 			files = (
 				957A8F46243EA3B0007EF3DB /* SearchVC.swift in Sources */,
 				95EC0DB224494A4800AEB335 /* GFTSecondaryTitleLabel.swift in Sources */,
+				9525FE0D244FD72600A62219 /* FavoritesCell.swift in Sources */,
 				953FEA6024436AC0001B7B1D /* UIViewController+Ext.swift in Sources */,
 				954135DC244D3AD200AA9AEA /* String+Ext.swift in Sources */,
 				953F3C9E2441161300282304 /* GFButton.swift in Sources */,
