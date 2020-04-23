@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		950169482450666500E5A7E7 /* GFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950169472450666500E5A7E7 /* GFTabBarController.swift */; };
+		9501694A24511A0700E5A7E7 /* GFAlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9501694924511A0700E5A7E7 /* GFAlertContainerView.swift */; };
+		9501694C24512A8100E5A7E7 /* GFDataLoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9501694B24512A8100E5A7E7 /* GFDataLoadingVC.swift */; };
 		951D916D244544080070EA44 /* FollowersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951D916C244544080070EA44 /* FollowersCell.swift */; };
 		951D916F244544950070EA44 /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951D916E244544950070EA44 /* GFAvatarImageView.swift */; };
 		9525FE0D244FD72600A62219 /* FavoritesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9525FE0C244FD72500A62219 /* FavoritesCell.swift */; };
@@ -43,6 +46,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		950169472450666500E5A7E7 /* GFTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTabBarController.swift; sourceTree = "<group>"; };
+		9501694924511A0700E5A7E7 /* GFAlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertContainerView.swift; sourceTree = "<group>"; };
+		9501694B24512A8100E5A7E7 /* GFDataLoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFDataLoadingVC.swift; sourceTree = "<group>"; };
 		951D916C244544080070EA44 /* FollowersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersCell.swift; sourceTree = "<group>"; };
 		951D916E244544950070EA44 /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
 		9525FE0C244FD72500A62219 /* FavoritesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCell.swift; sourceTree = "<group>"; };
@@ -91,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		950169462450660D00E5A7E7 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				950169472450666500E5A7E7 /* GFTabBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
 		951D916B244543CC0070EA44 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +119,7 @@
 			children = (
 				9557A0DF2447E041005E0B16 /* GFEmptyStateView.swift */,
 				954E9650244BB4EC005ED4B8 /* GFItemInfoView.swift */,
+				9501694924511A0700E5A7E7 /* GFAlertContainerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -152,6 +167,7 @@
 				95B3CE87244C99C9003E487B /* GFItemInfoVC.swift */,
 				95B3CE89244C9E71003E487B /* GFRepoItemVC.swift */,
 				95B3CE8B244CA119003E487B /* GFFollowerItemVC.swift */,
+				9501694B24512A8100E5A7E7 /* GFDataLoadingVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -210,6 +226,7 @@
 		95F97FDB2443BF6700726DBE /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				950169462450660D00E5A7E7 /* TabBarController */,
 				9557A0E22447E09B005E0B16 /* ViewControllers */,
 				9557A0E12447E04D005E0B16 /* Buttons */,
 				9557A0DE2447DFD9005E0B16 /* Labels */,
@@ -354,8 +371,11 @@
 				95F97FE22443EE4800726DBE /* User.swift in Sources */,
 				954E9651244BB4EC005ED4B8 /* GFItemInfoView.swift in Sources */,
 				953FEA5E244357F9001B7B1D /* GFAlertVC.swift in Sources */,
+				950169482450666500E5A7E7 /* GFTabBarController.swift in Sources */,
+				9501694C24512A8100E5A7E7 /* GFDataLoadingVC.swift in Sources */,
 				95898826244E7BA900CBAD6E /* PersistanceManager.swift in Sources */,
 				95EC0DAE244947F600AEB335 /* GFError.swift in Sources */,
+				9501694A24511A0700E5A7E7 /* GFAlertContainerView.swift in Sources */,
 				951D916F244544950070EA44 /* GFAvatarImageView.swift in Sources */,
 				951D916D244544080070EA44 /* FollowersCell.swift in Sources */,
 				95F97FE02443ED9900726DBE /* Follower.swift in Sources */,
