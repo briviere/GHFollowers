@@ -26,5 +26,4 @@ class GFAlertContentView: UIView {
         layer.borderColor = UIColor.white.cgColor
         translatesAutoresizingMaskIntoConstraints = false
     }
-    
 }

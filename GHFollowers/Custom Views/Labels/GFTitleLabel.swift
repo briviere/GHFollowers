@@ -15,9 +15,11 @@ class GFTitleLabel: UILabel {
         
     }
     
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     
     convenience init(textAlignment: NSTextAlignment, fontSize: CGFloat) {
         self.init(frame: .zero)
@@ -26,6 +28,7 @@ class GFTitleLabel: UILabel {
         configure()
     }
     
+    
     private func configure() {
         textColor = .label
         adjustsFontSizeToFitWidth   = true
@@ -33,5 +36,4 @@ class GFTitleLabel: UILabel {
         lineBreakMode               = .byTruncatingTail
         translatesAutoresizingMaskIntoConstraints = false
     }
-
 }

@@ -16,11 +16,13 @@ enum SFSymbols {
     static let following = UIImage(systemName:"person.2")
 }
 
+
 enum Images {
     static let placeholder = UIImage(named: "avatar-placeholder")
     static let emptyStateLogo = UIImage(named: "empty-state-logo")
     static let ghLogo = UIImage(named: "gh-logo")
 }
+
 
 enum ScreenSize {
     static let width        = UIScreen.main.bounds.size.width

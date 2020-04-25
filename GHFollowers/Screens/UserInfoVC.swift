@@ -119,7 +119,6 @@ class UserInfoVC: GFDataLoadingVC {
             dateLabel.topAnchor.constraint(equalTo: itemViewTwo.bottomAnchor, constant: padding),
             dateLabel.heightAnchor.constraint(equalToConstant: 50)
         ])
-        
     }
     
     func add(childVC: UIViewController, to containerView: UIView) {
